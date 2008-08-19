@@ -1,9 +1,9 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  photo: 
-  geom: 
+  photo_id: 1 
+  geom: 01010000A0E610000000000000387D47C00E000000643135C0000000000000F03F
 
 two:
-  photo: 
-  geom: 
+  photo_id: 1 
+  geom: 01010000A0E610000000000000387D47C00E000000643135C0000000000000F03F

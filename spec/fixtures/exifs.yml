@@ -1,7 +1,7 @@
 # Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
 
 one:
-  photo: 
+  photo_id: 1 
   camera: MyString
   exposure: 1.5
   aperture: 1.5
@@ -18,7 +18,7 @@ one:
   metering_mode: MyString
 
 two:
-  photo: 
+  photo_id: 1 
   camera: MyString
   exposure: 1.5
   aperture: 1.5
