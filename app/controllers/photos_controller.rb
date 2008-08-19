@@ -40,16 +40,25 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.xml
   def create
-    @photo = Photo.new(params[:photo])
-
-    respond_to do |format|
+    if params[:Filedata]
+      @photo = Photo.new(:swfupload_file => params[:Filedata])
       if @photo.save
-        flash[:notice] = 'Photo was successfully created.'
-        format.html { redirect_to(@photo) }
-        format.xml  { render :xml => @photo, :status => :created, :location => @photo }
+        render :partial => 'photo', :object => @photo
       else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @photo.errors, :status => :unprocessable_entity }
+        render :text => "error"
+      end
+    else
+      @photo = Photo.new(params[:photo])
+
+      respond_to do |format|
+        if @photo.save
+          flash[:notice] = 'Photo was successfully created.'
+          format.html { redirect_to(@photo) }
+          format.xml  { render :xml => @photo, :status => :created, :location => @photo }
+        else
+          format.html { render :action => "new" }
+          format.xml  { render :xml => @photo.errors, :status => :unprocessable_entity }
+        end
       end
     end
   end
