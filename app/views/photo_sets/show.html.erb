@@ -1,0 +1,13 @@
+<p>
+  <b>User:</b>
+  <%=h @photo_set.user %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%=h @photo_set.title %>
+</p>
+
+
+<%= link_to 'Edit', edit_photo_set_path(@photo_set) %> |
+<%= link_to 'Back', photo_sets_path %>

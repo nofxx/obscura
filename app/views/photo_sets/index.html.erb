@@ -1,0 +1,22 @@
+<h1>Listing photo_sets</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Title</th>
+  </tr>
+
+<% for photo_set in @photo_sets %>
+  <tr>
+    <td><%=h photo_set.user %></td>
+    <td><%=h photo_set.title %></td>
+    <td><%= link_to 'Show', photo_set %></td>
+    <td><%= link_to 'Edit', edit_photo_set_path(photo_set) %></td>
+    <td><%= link_to 'Destroy', photo_set, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New photo_set', new_photo_set_path %>
