@@ -16,7 +16,7 @@ The photo gallery for amateur photographers.
  rake db:migrate
  script/server
  
- 
+
 == TESTING:
 
 Requires rspec.
