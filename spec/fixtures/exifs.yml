@@ -1,0 +1,35 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  photo: 
+  camera: MyString
+  exposure: 1.5
+  aperture: 1.5
+  iso: 1
+  focal: 1
+  flash: MyString
+  expo_program: MyString
+  expo_bias: MyString
+  expo_mode: MyString
+  white_balance: MyString
+  color_space: MyString
+  color_depth: MyString
+  lens: MyString
+  metering_mode: MyString
+
+two:
+  photo: 
+  camera: MyString
+  exposure: 1.5
+  aperture: 1.5
+  iso: 1
+  focal: 1
+  flash: MyString
+  expo_program: MyString
+  expo_bias: MyString
+  expo_mode: MyString
+  white_balance: MyString
+  color_space: MyString
+  color_depth: MyString
+  lens: MyString
+  metering_mode: MyString

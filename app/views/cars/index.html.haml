@@ -1,0 +1,15 @@
+%h1 Listing cars
+%table
+  %tr
+    %th Plate
+    %th Year
+  - for car in @cars
+    %tr
+      %td=h car.plate
+      %td=h car.year
+      %td= link_to 'Show', car
+      %td= link_to 'Edit', edit_car_path(car)
+      %td= link_to 'Destroy', car, :confirm => 'Are you sure?', :method => :delete
+ 
+
+= link_to 'New car', new_car_path
