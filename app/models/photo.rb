@@ -1,4 +1,5 @@
 require 'mime/types'
+require 'exifr'
 
 class Photo < ActiveRecord::Base
   belongs_to :user
@@ -15,6 +16,8 @@ class Photo < ActiveRecord::Base
   
   has_one :exif
   has_one :local
+  
+  #EXIFR::JPEG.new('').inspect
   
   # Fix the mime types. Make sure to require the mime-types gem
   def swfupload_file=(data)

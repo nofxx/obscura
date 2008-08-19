@@ -5,9 +5,13 @@ The photo gallery for amateur photographers.
 
 == REQUIREMENTS:
 
-* rmagick (gem)
-* mime-types (gem)
-* GeoRuby (gem) (geotagging)
+Gems:
+* rmagick
+* mime-types
+* exifr 
+* GeoRuby
+
+Database:
 * PostgreSQL/MySQL (spatial_adapter for geotagging)
 
 
