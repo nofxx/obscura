@@ -1,0 +1,1 @@
+page.replace_html "star-ratings-block", :partial => 'photos/rating'

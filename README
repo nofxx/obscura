@@ -10,6 +10,7 @@ Gems:
 * mime-types
 * exifr 
 * GeoRuby
+* haml
 
 Database:
 * PostgreSQL/MySQL (spatial_adapter for geotagging)

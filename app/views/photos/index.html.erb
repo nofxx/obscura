@@ -7,6 +7,7 @@
 
 <% for photo in @photos %>
   <tr>
+		<td><%= image_tag(photo.media.url(:thumb)) %></td>  	
     <td><%=h photo.title %></td>
     <td><%= link_to 'Show', photo %></td>
     <td><%= link_to 'Edit', edit_photo_path(photo) %></td>

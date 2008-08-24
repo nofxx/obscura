@@ -4,6 +4,7 @@ require 'exifr'
 class Photo < ActiveRecord::Base
   belongs_to :user
   has_and_belongs_to_many :photo_sets, :join_table => "photo_photo_sets", :select => 'photo_sets.*'#, :foreign_key => "photo_sets_id"
+  acts_as_rateable
   
   has_attached_file :media, :styles => { 
     :medium => "300x300>", 

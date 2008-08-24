@@ -2,7 +2,12 @@
   <b>Title:</b>
   <%=h @photo.title %>
 </p>
-
-
+<p>
+  <b>Photo:</b>
+  <%= image_tag(@photo.media.url) %>
+</p>
+<p>
+	<%= render :partial => "photos/rating", :locals => { :photo => @photo } %>
+</p>
 <%= link_to 'Edit', edit_photo_path(@photo) %> |
 <%= link_to 'Back', photos_path %>

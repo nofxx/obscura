@@ -1,0 +1,33 @@
+<div id="star-ratings-block">
+<%= number_with_precision(@photo.rating, 1) %>/5 Stars<br>
+<ul class='star-rating'>
+    <li class='current-rating' style='width:<%= (@photo.rating * 30).to_i -%>px;'>
+          Currently <%= number_with_precision(@photo.rating, 1) %>/5 Stars.
+        </li>
+    <li>
+        <%= link_to_remote( "1", {:url => { :controller => "photos", 
+            :action => "rate", :id => @photo.id, :rating => 1}},
+            :class => 'one-star', :name => '1 star out of 5') %>
+    </li>
+    <li>
+        <%= link_to_remote( "2", {:url => { :controller => "photos", 
+            :action => "rate", :id => @photo.id, :rating => 2}},
+            :class => 'two-stars', :name => '2 stars out of 5') %>    
+    </li>
+    <li>
+        <%= link_to_remote( "3", {:url => { :controller => "photos", 
+            :action => "rate", :id => @photo.id, :rating => 3}},
+            :class => 'three-stars', :name => '3 stars out of 5') %>
+    </li>
+    <li>
+        <%= link_to_remote( "4", {:url => { :controller => "photos", 
+            :action => "rate", :id => @photo.id, :rating => 4}},
+            :class => 'four-stars', :name => '4 stars out of 5') %>    
+    </li>
+    <li>
+        <%= link_to_remote( "5", {:url => { :controller => "photos", 
+            :action => "rate", :id => @photo.id, :rating => 5}},
+            :class => 'five-stars', :name => '5 stars out of 5') %>
+    </li>
+</ul>
+	</div>

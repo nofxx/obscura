@@ -91,4 +91,10 @@ class PhotosController < ApplicationController
       format.xml  { head :ok }
     end
   end
+  def rate
+    @photo = Photo.find(params[:id])
+    #Futuramente acrescentar o user_id no Rating
+    #Rating.new(:rating => params[:rating], :user_id => current_user.id)
+    @photo.add_rating Rating.new(:rating => params[:rating])
+	end   
 end

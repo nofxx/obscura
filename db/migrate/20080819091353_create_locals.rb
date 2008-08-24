@@ -2,9 +2,10 @@ class CreateLocals < ActiveRecord::Migration
   def self.up
     create_table :locals do |t|
       t.references :photo, :null => false
-      t.point :geom, :null => false, :srid => 4326, :with_z => true
+      #t.point :geom, :null => false, :srid => 4326, :with_z => true
+      t.column "geom", :point, :srid => 4326
     end
-    add_index "locals", "geom", :spatial => true
+    #add_index "locals", "geom", :spatial => true
   end
 
 
